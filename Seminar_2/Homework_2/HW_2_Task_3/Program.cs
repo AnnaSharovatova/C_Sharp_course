@@ -2,16 +2,19 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
-
+void ShowThirdNumber()
+{
     int SomeNumber = new Random().Next(1, 1000000);
     string SomeNumberText = Convert.ToString(SomeNumber);
     Console.WriteLine(SomeNumberText);
 
-if (SomeNumberText.Length > 2)
-{
-    Console.WriteLine("Третья цифра числа -> " + SomeNumberText[2]);
+    if (SomeNumberText.Length > 2)
+    {
+        Console.WriteLine("Третья цифра числа -> " + SomeNumberText[2]);
+    }
+    else
+    {
+        Console.WriteLine("Число меньше, чем трехзначное, а значит третьей цифры нет.");
+    }
 }
-else
-{
-    Console.WriteLine("Число меньше, чем трехзначное, а значит третьей цифры нет.");
-}
+ShowThirdNumber();
