@@ -25,6 +25,7 @@ arr[i] = new Random().Next(1, 100);
 }
 return arr;
 }
+
 int SumOddIndexNum(int[]arr)
 {
     int sum_odd = 0;
