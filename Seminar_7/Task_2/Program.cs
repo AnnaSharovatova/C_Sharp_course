@@ -1,5 +1,5 @@
 ﻿// Задайте двумерный массив размера m на n, каждый
-// элемент в массиве находится по формуле: Aₙₙ = m+n.
+// элемент в массиве находится по формуле: A = m+n.
 // Выведите полученный массив на экран.
 // m = 3, n = 4.
 // 0 1 2 3
@@ -37,10 +37,10 @@ int[,] MassNums(int row, int column)
 }
 
 
-Console.WriteLine("Enter the number of rows: ");
+Console.WriteLine("Введите число рядов: ");
 int row = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Enter the number of columns: ");
+Console.WriteLine("Введите число колонок: ");
 int column = int.Parse(Console.ReadLine());
 
 int[,] arr_1 = MassNums(row, column);
