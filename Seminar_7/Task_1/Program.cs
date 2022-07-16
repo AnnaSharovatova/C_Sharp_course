@@ -1,4 +1,5 @@
-﻿// Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+﻿// DEMO
+// Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 // m = 3, n = 4.
 // 1 4 8 19
 // 5 -2 33 -2
@@ -35,11 +36,13 @@ int[,] MassNums(int row, int column, int from, int to)
 }
 
 
-Console.WriteLine("Enter the number of rows: ");
+Console.WriteLine("Введите число рядов: ");
 int row = int.Parse(Console.ReadLine());
 
-Console.WriteLine("Enter the number of columns: ");
+Console.WriteLine("Введите число колонок: ");
 int column = int.Parse(Console.ReadLine());
+
+Console.WriteLine();
 
 int[,] arr_1 = MassNums(row, column, 1, 101);
 Print(arr_1);

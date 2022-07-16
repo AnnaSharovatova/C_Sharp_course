@@ -8,42 +8,54 @@
 // Введенный элемент 2, результат: [1, 4]
 // Введенный элемент 6, результат: такого элемента нет.
 
-void Print(int[,] arr)
+void PrintIntArray(int[,] matr)
 {
-    int row_size = arr.GetLength(0);
-    int column_size = arr.GetLength(1);
 
-    for (int i = 0; i < row_size; i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < column_size; j++)
+
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
-            Console.Write($" {arr[i, j]} ");
-        } 
-        Console.WriteLine();       
+            Console.Write($"-{matr[i, j]}- ");
+
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
 }
 
-int[,] MassNums(int row, int column, int from, int to)
+int[,] FillArrayFunc (int m, int n)
 {
-    int[,] arr = new int[row, column];
+    int [,] resultArray = new int [m,n];
 
-    for (int i = 0; i < row; i++)
-    {   
-        for (int j = 0; j < column; j++)
+    for (int i = 0; i < m; i++)
+    {
+
+        for (int j = 0; j < n; j++)
         {
-            arr[i, j] = new Random().Next(from, to);
-        }        
+            resultArray[i, j] = new Random().Next(0, 10);
+        }
     }
-    return arr;
+
+    return resultArray;
 }
 
 
-Console.WriteLine("Enter the number of rows: ");
-int row = int.Parse(Console.ReadLine());
+void FindPosOfNum (int [,] array, int num)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
 
-Console.WriteLine("Enter the number of columns: ");
-int column = int.Parse(Console.ReadLine());
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i,j] == num){
+                Console.WriteLine($"[{i+1}, {j+1}]");
+                return;
+            }
+        }
+    }
+    Console.WriteLine("не найдено");
+}
 
-int[,] arr_1 = MassNums(row, column, 1, 101);
-Print(arr_1);
+int [,] matrix = FillArrayFunc(4,4);
+PrintIntArray(matrix);
+FindPosOfNum(matrix,2);
