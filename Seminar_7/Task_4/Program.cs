@@ -47,7 +47,8 @@ void FindPosOfNum (int [,] array, int num)
 
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i,j] == num){
+            if (array[i,j] == num)
+            {
                 Console.WriteLine($"[{i+1}, {j+1}]");
                 return;
             }
@@ -58,4 +59,4 @@ void FindPosOfNum (int [,] array, int num)
 
 int [,] matrix = FillArrayFunc(4,4);
 PrintIntArray(matrix);
-FindPosOfNum(matrix,2);
+FindPosOfNum(matrix,4);
