@@ -9,10 +9,10 @@ int M = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-void SumOfSequence(int M, int N)
+void EvenNaturalNumbers(int M, int N)
 {
     if (N < M) return;
-    Sequence(M, N - 1);
+    EvenNaturalNumbers(M, N - 1);
     if (N % 2 == 0) Console.Write($"{N}, ");
 }
-Sequence(M, N);
+EvenNaturalNumbers(M, N);
